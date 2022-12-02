@@ -2,6 +2,7 @@ import React from "react";
 import { Container } from "../../common/Container/Container";
 import "./Home.scss";
 import { Button } from "../../common/Button/Button";
+import {Profile} from "./Profile/Profile";
 
 export const Home = () => {
   return (
@@ -11,6 +12,7 @@ export const Home = () => {
           <p>Patrycja Ińska</p>
           <Button title="formularz rejestracyjny" color="gray" size="big" />
         </nav>
+          <Profile />
       </Container>
     </>
   );

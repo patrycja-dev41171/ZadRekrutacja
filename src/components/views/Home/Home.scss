@@ -3,19 +3,22 @@
 .home__nav {
   display: flex;
   justify-content: space-between;
-  align-items: center;
   flex-wrap: wrap;
   width: 100%;
   padding: 11px 21px;
-  max-height: 90px;
+  margin-bottom: 30px;
+  @include lg {
+    margin-bottom: 87px;
+  }
   & > p {
     font-size: 20px;
     margin: 0;
-    padding: 10px 0;
+    padding: 10px 0 20px;
     font-family: $Lato;
     font-weight: 400;
     @include sm {
       font-size: 30px;
+      padding: 10px 0;
     }
   }
 }

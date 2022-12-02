@@ -18,7 +18,7 @@
     font-style: italic;
     font-size: 20px;
     color: $color-white;
-    -webkit-text-stroke: 1px $color-04;
+    -webkit-text-stroke: 0.5px $color-04;
     text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
     @include sm {
       width: 195px;
