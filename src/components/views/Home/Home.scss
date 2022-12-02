@@ -1,0 +1,21 @@
+@import "../../../styles/main";
+
+.home__nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 11px 21px;
+  max-height: 90px;
+  & > p {
+    font-size: 20px;
+    margin: 0;
+    padding: 10px 0;
+    font-family: $Lato;
+    font-weight: 400;
+    @include sm {
+      font-size: 30px;
+    }
+  }
+}
