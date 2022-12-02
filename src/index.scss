@@ -1,6 +1,14 @@
-body {
+@import "styles/main";
+
+html, body, .root, .container {
+  width: 100vw;
+  height: 100vh;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-  height: 100vh;
+}
+
+body {
+  background-color: $color-04;
+  display: flex;
+  justify-content: center;
 }
