@@ -1,0 +1,49 @@
+@import "../../../styles/main";
+
+.btn {
+  background-color: transparent;
+  border: none;
+  box-shadow: 10px 4px 4px rgba(0, 0, 0, 0.75);
+  border-radius: 20px;
+  text-align: left;
+  width: 186px;
+  @include sm {
+    width: 236px;
+  }
+  & > p {
+    width: 135px;
+    margin: 0 0 0 auto;
+    font-family: $Lato;
+    font-weight: 400;
+    font-style: italic;
+    font-size: 20px;
+    color: $color-white;
+    -webkit-text-stroke: 0.5px $color-04;
+    text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    @include sm {
+      width: 195px;
+      font-size: 30px;
+    }
+  }
+  &--big {
+    height: 70px;
+    @include sm {
+      height: 90px;
+    }
+  }
+  &--small {
+    height: 45px;
+    @include sm {
+      height: 55px;
+    }
+  }
+  &--gray {
+    background-color: $color-01;
+  }
+  &--green {
+    background-color: $color-green;
+  }
+  &--blue {
+    background-color: $color-blue;
+  }
+}
