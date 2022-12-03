@@ -1,0 +1,25 @@
+@import "../../../styles/main";
+
+.register__header {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 101px 174px 56px;
+  &__h1 {
+    width: 100%;
+    text-transform: uppercase;
+    font-family: $Inter;
+    font-weight: 800;
+    font-size: 20px;
+    letter-spacing: 0.15em;
+    line-height: 165%;
+    text-align: right;
+  }
+  &__rectangle {
+    background-color: $color-blue;
+    width: 166px;
+    height: 9.3px;
+    margin: 0 0 0 auto;
+  }
+}
