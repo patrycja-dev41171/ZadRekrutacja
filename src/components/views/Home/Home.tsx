@@ -1,19 +1,15 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { addStarWarsData } from "../../../redux/features/data/data-slice";
-import { StoreState } from "../../../redux/store";
 import { Container } from "../../common/Container/Container";
 import { Button } from "../../common/Button/Button";
 import { Profile } from "./Profile/Profile";
 import { apiUrl } from "../../../config/api";
-import { People, StarWarsData } from "../../../utils/types";
+import { People } from "../../../utils/types";
 import "./Home.scss";
 
 export const Home = () => {
-  const { starWarsData } = useSelector(
-    (store: StoreState) => store.starWarsData
-  );
   const [id, setId] = useState<number>(1);
   const [error, setError] = useState<string>("");
   const [people, setPeople] = useState<People>({
@@ -39,12 +35,11 @@ export const Home = () => {
             eyeColor: data.eye_color,
             birthYear: data.birth_year,
           });
-          const obj = {
+          dispatch(addStarWarsData({
             name: data.name,
             created: data.created,
             vehicles: data.vehicles,
-          };
-          dispatch(addStarWarsData(obj));
+          }));
         } else {
           setError("Nie znaleziono danych. Spróbój jeszcze raz.");
         }
