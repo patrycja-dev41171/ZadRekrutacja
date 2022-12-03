@@ -1,25 +1,28 @@
 import React from "react";
-import { Button } from "../../../common/Button/Button";
+import { People } from "../../../../utils/types";
 import "./Profile.scss";
 
-export const Profile = () => {
+export const Profile = (props: People) => {
   return (
     <div className="profile">
       <div className="profile__component">
-        <img src="https://picsum.photos/200" alt={"as"} />
+        <img src={props.img} alt={"as"} />
         <div className="profile__component__name">
-          <p>Name</p>
+          <p>{props.name}</p>
           <div>
             <img src="/assets/star.png" alt="" />
             <img src="/assets/check.png" alt="" />
           </div>
         </div>
         <div className="profile__component__info">
-          <p className="profile__component__info--age">age:</p>
-          <p className="profile__component__info--eye">eye color:</p>
+          <p className="profile__component__info--age">
+            birth date: {props.birthYear}
+          </p>
+          <p className="profile__component__info--eye">
+            eye color: {props.eyeColor}
+          </p>
         </div>
       </div>
-      <Button title="next profiles" color="green" size="small" />
     </div>
   );
 };
