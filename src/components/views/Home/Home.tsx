@@ -35,11 +35,13 @@ export const Home = () => {
             eyeColor: data.eye_color,
             birthYear: data.birth_year,
           });
-          dispatch(addStarWarsData({
-            name: data.name,
-            created: data.created,
-            vehicles: data.vehicles,
-          }));
+          dispatch(
+            addStarWarsData({
+              name: data.name,
+              created: data.created,
+              vehicles: data.vehicles,
+            })
+          );
         } else {
           setError("Nie znaleziono danych. Spróbój jeszcze raz.");
         }

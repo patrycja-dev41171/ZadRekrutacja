@@ -1,0 +1,42 @@
+@import "../../../styles/main";
+
+.register__header {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 30px 20px;
+  @include md {
+    padding: 101px 174px 56px;
+  }
+  &__h1 {
+    width: 100%;
+    font-family: $Inter;
+    font-weight: 800;
+    font-size: 20px;
+    letter-spacing: 0.15em;
+    line-height: 165%;
+    text-transform: uppercase;
+    text-align: center;
+    @include md {
+      text-align: right;
+    }
+  }
+  &__rectangle {
+    width: 166px;
+    height: 9.3px;
+    margin: auto;
+    background-color: $color-blue;
+    @include md {
+      margin: 0 0 0 auto;
+    }
+  }
+}
+
+.register__main {
+  width: 100%;
+  padding: 0 20px;
+  @include md {
+    width: 750px;
+  }
+}
