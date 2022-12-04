@@ -1,0 +1,122 @@
+@import "../../../../styles/main";
+
+.profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  &__component {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 240px;
+    height: 222px;
+    box-sizing: border-box;
+    padding: 42px 36.6px 20.9px 43.2px;
+    margin-bottom: 30px;
+    border-radius: 500px 60px 300px 100px;
+    box-shadow: (12px 4px 4px rgba(0, 0, 0, 0.6));
+    background-color: #c6bfbf;
+    backdrop-filter: blur(280px);
+    @include sm {
+      width: 560px;
+      height: 518px;
+      padding: 98px 85.4px 48.8px 100.8px;
+    }
+    @include lg {
+      width: 800px;
+      height: 740px;
+      padding: 140px 122px 69.69px 144px;
+    }
+    & > img {
+      width: 160.2px;
+      height: 114.9px;
+      border-radius: 200px 20px 100px 50px;
+      @include sm {
+        width: 373.8px;
+        height: 268.1px;
+      }
+      @include lg {
+        width: 534px;
+        height: 383px;
+      }
+    }
+  }
+}
+
+.profile__component__name {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-top: 7.5px;
+  @include sm {
+    margin-top: 17.5px;
+  }
+  @include sm {
+    margin-top: 26px;
+  }
+
+  & > p {
+    font-family: $Inter;
+    font-size: 14px;
+    font-weight: 800;
+    text-align: center;
+    width: 80%;
+    margin: 0;
+    @include sm {
+      font-size: 24px;
+    }
+    @include lg {
+      font-size: 50px;
+    }
+  }
+
+  & > div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 45px;
+    @include sm {
+      width: 65px;
+    }
+    @include lg {
+      width: 115px;
+    }
+
+    & > img {
+      width: 18px;
+      @include sm {
+        width: 28px;
+      }
+      @include lg {
+        width: 50px;
+      }
+    }
+  }
+}
+
+.profile__component__info {
+  width: 75%;
+  margin-top: 3px;
+  @include sm {
+    margin-top: 7px;
+  }
+  @include lg {
+    margin-top: 10px;
+  }
+  & > p {
+    font-family: $Inter;
+    font-size: 10px;
+    font-style: italic;
+    font-weight: 100;
+    margin: 0;
+    @include sm {
+      font-size: 14px;
+      margin: 2px 0;
+    }
+    @include lg {
+      font-size: 20px;
+    }
+  }
+}

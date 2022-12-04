@@ -1,0 +1,35 @@
+@import "../../../styles/main";
+
+.home__nav {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 11px 21px;
+  margin-bottom: 30px;
+  @include xl {
+    margin-bottom: 87px;
+  }
+  & > p {
+    font-family: $Lato;
+    font-size: 20px;
+    font-weight: 400;
+    margin: 0;
+    padding: 10px 0 20px;
+    @include sm {
+      font-size: 30px;
+      padding: 10px 0;
+    }
+  }
+}
+
+.home__error {
+  font-family: $Inter;
+  font-size: 14px;
+  width: 100%;
+  text-align: center;
+  color: $color-red;
+  @include md {
+    font-size: 24px;
+  }
+}
