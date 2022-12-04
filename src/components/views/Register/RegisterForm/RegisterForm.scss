@@ -1,0 +1,65 @@
+@import "../../../../styles/main";
+
+.form__register {
+  margin-bottom: 40px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @include md {
+    width: 750px;
+  }
+  & > label {
+    font-size: 20px;
+    font-weight: 700;
+    font-family: $Inter;
+    line-height: 165%;
+    position: relative;
+    & > input {
+      height: 50px;
+      border: none;
+      border-bottom: 1.5px solid $color-black;
+    }
+    & > span {
+      color: red;
+      font-weight: 300;
+      font-style: italic;
+      position: absolute;
+      bottom: -30px;
+      right: 0;
+    }
+    & > span.checkbox__error {
+      bottom: -35px;
+      left: 0;
+      @include md {
+        bottom: 0;
+        left: 40%;
+      }
+    }
+    & > span.disable {
+      display: none;
+    }
+  }
+  & > .text {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 23px;
+  }
+  & > .checkbox {
+    margin: 20px auto 50px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    @include md {
+      margin: 0 0 18.6px 0;
+    }
+    & > input {
+      width: 30px;
+      height: 30px;
+      margin-right: 20px;
+    }
+  }
+}
+
+
