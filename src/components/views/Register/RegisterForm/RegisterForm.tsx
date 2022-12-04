@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import { Button } from "../../../common/Button/Button";
-import { useForm } from "react-hook-form";
 import { useSelector } from "react-redux";
 import { StoreState } from "../../../../redux/store";
+import { useForm } from "react-hook-form";
+import { Button } from "../../../common/Button/Button";
 import "./RegisterForm.scss";
 
 type FormData = {
@@ -23,9 +23,7 @@ export const RegisterForm = () => {
 
   const {
     register,
-    setValue,
     handleSubmit,
-    reset,
     formState: { errors },
   } = useForm<FormData>();
 
@@ -49,7 +47,7 @@ export const RegisterForm = () => {
           },
           body: JSON.stringify({ ...data, starWarsData }),
         });
-        const response = await res.json();
+        // const response = await res.json();
         //response validation
       } catch (err) {
         console.log(err);
@@ -61,7 +59,10 @@ export const RegisterForm = () => {
     <form className={"form__register"} onSubmit={onSubmit}>
       <label className="text">
         Login:
-        <input {...register("login", { required: "To pole jest wymagane." })} />
+        <input
+          {...register("login", { required: "To pole jest wymagane." })}
+          className={errors.login ? "error" : ""}
+        />
         {errors.login && (
           <span className="text__error">{errors.login?.message}</span>
         )}
@@ -70,6 +71,7 @@ export const RegisterForm = () => {
         Hasło:
         <input
           {...register("password", { required: "To pole jest wymagane." })}
+          className={errors.password ? "error" : ""}
         />
         {errors.password && (
           <span className="text__error">{errors.password?.message}</span>
@@ -82,6 +84,7 @@ export const RegisterForm = () => {
             required: "To pole jest wymagane",
             pattern: /@/,
           })}
+          className={errors.email ? "error" : ""}
         />
         {errors.email && (
           <span className="text__error">
@@ -100,6 +103,7 @@ export const RegisterForm = () => {
             minLength: 9,
             maxLength: 9,
           })}
+          className={errors.phone ? "error" : ""}
         />
         {errors.phone && (
           <span className="text__error">

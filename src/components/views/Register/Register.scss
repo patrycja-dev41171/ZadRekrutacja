@@ -11,22 +11,22 @@
   }
   &__h1 {
     width: 100%;
-    text-transform: uppercase;
     font-family: $Inter;
     font-weight: 800;
     font-size: 20px;
     letter-spacing: 0.15em;
     line-height: 165%;
+    text-transform: uppercase;
     text-align: center;
     @include md {
       text-align: right;
     }
   }
   &__rectangle {
-    background-color: $color-blue;
     width: 166px;
     height: 9.3px;
     margin: auto;
+    background-color: $color-blue;
     @include md {
       margin: 0 0 0 auto;
     }
