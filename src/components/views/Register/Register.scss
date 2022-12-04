@@ -5,7 +5,10 @@
   justify-content: space-between;
   flex-wrap: wrap;
   width: 100%;
-  padding: 101px 174px 56px;
+  padding: 30px 20px;
+  @include md {
+    padding: 101px 174px 56px;
+  }
   &__h1 {
     width: 100%;
     text-transform: uppercase;
@@ -14,12 +17,26 @@
     font-size: 20px;
     letter-spacing: 0.15em;
     line-height: 165%;
-    text-align: right;
+    text-align: center;
+    @include md {
+      text-align: right;
+    }
   }
   &__rectangle {
     background-color: $color-blue;
     width: 166px;
     height: 9.3px;
-    margin: 0 0 0 auto;
+    margin: auto;
+    @include md {
+      margin: 0 0 0 auto;
+    }
+  }
+}
+
+.register__main {
+  width: 100%;
+  padding: 0 20px;
+  @include md {
+    width: 750px;
   }
 }
